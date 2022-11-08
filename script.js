@@ -7,3 +7,8 @@ function startClock () {
 
 startClock()
 
+$( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+
+

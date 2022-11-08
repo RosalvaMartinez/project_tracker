@@ -1,117 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap Link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- these links made my modal werk :3 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <title>Project Tracker</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap Link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- these links made my modal werk :3 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Jquery LINK for datepicker component in modal -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Project Tracker</title>
 </head>
-<body class="d-flex flex-column justify-content-between">
-  <!-- Header with Clock -->
-  <header class="">
-    <div id="hero" class="w-100 d-flex flex-column justify-content-center align-items-center">
-      <h1>Project Tracker</h1>
-      <h2>Current time and date:</h2>
-      <!-- Date and Clock get rendered here -->
+
+<body>
+  <header>
+    <div id="hero">
       <div id="clock">
-        <h2></h2>
+        <h1></h1>
       </div>
     </div>
   </header>
-  <main class="flex-grow-1">
-    <!-- Instructions Card Component -->
-    <section>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Instructions</h5>
-          <p class="card-text">Click the button below to open a form and provide information for the following:</p>
+  <!-- Instructions Card Component -->
+  <section>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Instructions</h5>
+        <p class="card-text">Click the button below to open a form and provide information for the following:</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Project Name</li>
+        <li class="list-group-item">Project Type</li>
+        <li class="list-group-item">Due Date</li>
+        <li class="list-group-item">Hourly Rate</li>
+      </ul>
+      <div class="card-body">
+        <button type="button" data-toggle="modal" data-target="#myModal" class="my-2 btn btn-danger">Add
+          Project</button>
+      </div>
+    </div>
+  </section>
+  <!-- Modal User Input Component -->
+  <div id="myModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add a new project</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Project Name</li>
-          <li class="list-group-item">Project Type</li>
-          <li class="list-group-item">Due Date</li>
-          <li class="list-group-item">Hourly Rate</li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Add Project</a>
+        <div class="modal-body">
+          <!-- project name -->
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Project Name</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm">
+          </div>
+          <!-- project name end -->
+          <!-- dropdown -->
+          <div class="input-group mb-3">
+            <select class="form-select" id="inputGroupSelect02">
+              <option selected>Choose...</option>
+              <option value="1">Web Application (Front End)</option>
+              <option value="2">Web Application (Back End)</option>
+              <option value="3">Web Application (Full Stack)</option>
+              <option value="4">Mobile Application</option>
+              <option value="5">Print Campaign</option>
+              <option value="6">Digital Marketing Campaign</option>
+            </select>
+            <label class="input-group-text" for="inputGroupSelect02">Project Type</label>
+          </div>
+          <!-- dropdown end -->
+          <!-- datepicker -->
+          <div id="datepicker"></div>
+          <!-- datepicker end -->
+          <p>Modal body text goes here.</p>
         </div>
-    </header>
-    <!-- Instructions Card Component -->
-    <section>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Instructions</h5>
-              <p class="card-text">Click the button below to open a form and provide information for the following:</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Project Name</li>
-              <li class="list-group-item">Project Type</li>
-              <li class="list-group-item">Due Date</li>
-              <li class="list-group-item">Hourly Rate</li>
-            </ul>
-            <div class="card-body">
-              <button type="button" data-toggle="modal" data-target="#myModal" class="my-2 btn btn-danger">Add Project</button>
-            </div>
-          </div>
-    </section>
-    <!-- Modal User Input Component -->
-        <div id="myModal" class="modal" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <!-- project name -->
-                  <div class="input-group input-group-sm mb-3">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                  </div>
-                  <!-- project name end -->
-                  <!-- dropdown -->
-                  <div class="input-group mb-3">
-                    <select class="form-select" id="inputGroupSelect02">
-                      <option selected>Choose...</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                  </div>
-                  <!-- dropdown end -->
-                  <!-- datepicker -->
-                  <div class="input-group date" data-provide="datepicker">
-                    <input type="text" class="form-control">
-                    <div class="input-group-addon">
-                        <span class="glyphicon glyphicon-th"></span>
-                    </div>
-                </div>
-                <!-- datepicker end -->
-                  <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-  </main>
-  <footer class="d-flex flex-column justify-content-center align-items-center">
-    <h5>Made with ❤️ by Ducki and Gewsi</h5>
-  </footer>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Javascript LINK -->
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   <script src="./script.js"></script>
 </body>
+
 </html>
