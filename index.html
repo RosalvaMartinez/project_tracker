@@ -12,15 +12,19 @@
   <title>Project Tracker</title>
 </head>
 
-<body>
-  <header>
-    <div id="hero">
+<body class="d-flex flex-column justify-content-between">
+  <!-- Header with Clock -->
+  <header class="">
+    <div id="hero" class="w-100 d-flex flex-column justify-content-center align-items-center">
+      <h1>Project Tracker</h1>
+      <h2>Current time and date:</h2>
+      <!-- Date and Clock get rendered here -->
       <div id="clock">
-        <h1></h1>
+        <h2></h2>
       </div>
     </div>
   </header>
-  <main>
+  <main class="flex-grow-1">
     <!-- Instructions Card Component -->
     <section>
       <div class="card" style="width: 18rem;">
@@ -62,8 +66,8 @@
       </div>
     </section>
   </main>
-  <footer>
-    
+  <footer class="d-flex flex-column justify-content-center align-items-center">
+    <h5>Made with ❤️ by Ducki and Gewsi</h5>
   </footer>
 
   <!-- Javascript LINK -->
