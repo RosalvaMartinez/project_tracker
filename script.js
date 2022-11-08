@@ -6,6 +6,7 @@ function startClock() {
 }
 
 startClock()
+loadProjects()
 
 $(function () {
     $("#datepicker").datepicker();
@@ -28,9 +29,15 @@ function addProject() {
     //push project objects into global array of projects
     projects.push(project);
     //convert array of project objects into string first then save in local storage
-    localStorage.setItem("project", JSON.stringify(projects))
-    //get array of objects containing projects
-    projects = JSON.parse(localStorage.getItem("project"));
+    localStorage.setItem("projects", JSON.stringify(projects))
+    //Call load projects to update Table component with newly added project
+    loadProjects()
+}
+
+function loadProjects() {
+    //Get array of "projects" containing objects from localStorage
+    projects = JSON.parse(localStorage.getItem("projects"));
+
     //If there arent any projects then 
     if (projects === null) {
         //just set projects to an empty array
@@ -46,6 +53,3 @@ function addProject() {
         }
     }
 }
-
-
-
