@@ -19,7 +19,7 @@ $( function() {
    var name = $("#input").val()
    var type = $("#inputGroupSelect02").val()
    //create object to store project name and type
-   var ptoject = {
+   var project = {
        name: name,
        type: type
   }
