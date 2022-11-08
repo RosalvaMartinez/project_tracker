@@ -12,12 +12,34 @@
     <link rel="stylesheet" href="styles.css">
     <title>Project Tracker</title>
 </head>
-<body>
-    <header>
-        <div id="hero">
-            <div id="clock">
-                <h1></h1>
-            </div>
+<body class="d-flex flex-column justify-content-between">
+  <!-- Header with Clock -->
+  <header class="">
+    <div id="hero" class="w-100 d-flex flex-column justify-content-center align-items-center">
+      <h1>Project Tracker</h1>
+      <h2>Current time and date:</h2>
+      <!-- Date and Clock get rendered here -->
+      <div id="clock">
+        <h2></h2>
+      </div>
+    </div>
+  </header>
+  <main class="flex-grow-1">
+    <!-- Instructions Card Component -->
+    <section>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Instructions</h5>
+          <p class="card-text">Click the button below to open a form and provide information for the following:</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Project Name</li>
+          <li class="list-group-item">Project Type</li>
+          <li class="list-group-item">Due Date</li>
+          <li class="list-group-item">Hourly Rate</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Add Project</a>
         </div>
     </header>
     <!-- Instructions Card Component -->
@@ -83,9 +105,13 @@
               </div>
             </div>
           </div>
-    
-<!-- Javascript LINK -->
-<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-<script src="./script.js"></script>
+  </main>
+  <footer class="d-flex flex-column justify-content-center align-items-center">
+    <h5>Made with ❤️ by Ducki and Gewsi</h5>
+  </footer>
+
+  <!-- Javascript LINK -->
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>

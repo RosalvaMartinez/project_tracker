@@ -1,18 +1,23 @@
 html,
 body {
     height: 100%;
-    margin: 0;
 }
 
 header {
     height: auto;
 }
 
-h1 {
+footer {
+    height: 75px;
+    background-color: navy;
+}
+
+h1,h2,h5 {
     margin: 0;
+    color: aliceblue;
 }
 
 #hero {
     height: 200px;
-    background-color: aquamarine;
+    background-color: navy;
 }
