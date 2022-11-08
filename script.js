@@ -14,11 +14,12 @@ $( function() {
   $("#button").on("click", addProject)
   var projects = []
   function addProject () {
+
     //get user input from text input fields
    var name = $("#input").val()
-   var type = $("#inputGroupSelect02")
+   var type = $("#inputGroupSelect02").val()
    //create object to store project name and type
-   var ptoject = {
+   var project = {
        name: name,
        type: type
   }
