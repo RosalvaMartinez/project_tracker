@@ -1,3 +1,5 @@
+var projects = []
+
 function startClock() {
     $('#clock').children('h2').text(dayjs().format("dddd, MMMM D h:mm:ss"))
     var ClockInterval = setInterval(function () {
@@ -13,7 +15,6 @@ $(function () {
 });
 
 $("#button").on("click", addProject)
-var projects = []
 function addProject() {
 
     //get user input from text input fields
