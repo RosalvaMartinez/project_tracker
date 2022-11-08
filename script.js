@@ -19,10 +19,12 @@ function addProject() {
     //get user input from text input fields
     var name = $("#input").val()
     var type = $("#inputGroupSelect02").val()
+    var date = $("#datepicker").val()
     //create object to store project name and type
     var project = {
         name: name,
-        type: type
+        type: type,
+        date: date
     }
     //push project objects into global array of projects
     projects.push(project);
@@ -32,26 +34,22 @@ function addProject() {
     loadProjects()
 }
 
-function loadProjects () {
-    //Get "projects" from localStorage
+function loadProjects() {
+    //Get array of "projects" containing objects from localStorage
     projects = JSON.parse(localStorage.getItem("projects"));
-    //If there are no previous projects (projects === null)
-    if(!projects) {
-        //Set the global array of projects to null
+
+    //If there arent any projects then 
+    if (projects === null) {
+        //just set projects to an empty array
         projects = []
-    } else { //Otherwise, load projects from localStorage into Table Component
-        //For each "project" object in the global array of projects
-        for(var i in projects) {
-            //Append a <tr> elements to <tbody>
-            $('tbody').append(
-                '<tr>' +
-                '<th>' + projects[i].name + '</th>' +
-                '<td>' + projects[i].type + '<td>' +
-                '</tr>'
+        //otherwise, if there are projects, 
+        //For each project object in the array called projects:
+    } else {
+        for (var i = 0; i < projects.length; i++) {
+            //inject a row into table body
+            $("tbody").append(
+                "<tr><th>" + projects[i].name + "</th><td>" + projects[i].type + "</td><td>" + projects[i].date + "</td></tr>"
             )
         }
     }
 }
-
-
-
