@@ -64,7 +64,7 @@
             <!-- project name -->
             <div class="input-group input-group-sm mb-3">
               <span class="input-group-text" id="inputGroup-sizing-sm">Project Name</span>
-              <input type="text" class="form-control" aria-label="Sizing example input"
+              <input type="text" id="input" class="form-control" aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-sm">
             </div>
             <!-- project name end -->
@@ -85,14 +85,32 @@
             <!-- datepicker -->
             <p>Date: <input type="text" id="datepicker"></p>
             <!-- datepicker end -->
-            <p>Modal body text goes here.</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" id="button" class="btn btn-primary">Add Project</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
+    </div>
+    <!-- Chart Component -->
+    <div>
+      <table class="table" id="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </main>
   <footer class="d-flex flex-column justify-content-center align-items-center">
