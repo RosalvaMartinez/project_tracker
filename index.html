@@ -5,17 +5,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap CSS Link -->
+  <!-- these links made my modal werk :3 jquery 3.6 and jquery UI CSS 1.13.2  -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Jquery UI for datepicker component in modal -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <!-- Bootstrap CSS and JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- these links made my modal werk :3 jquery 3.6 and Bootstrap javascript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- Jquery LINK for datepicker component in modal -->
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="styles.css">
   <title>Project Tracker</title>
 </head>
+
 <body class="d-flex flex-column justify-content-between">
   <!-- Header with Clock -->
   <header class="h-auto">
@@ -81,7 +83,7 @@
             </div>
             <!-- dropdown end -->
             <!-- datepicker -->
-            <div id="datepicker"></div>
+            <p>Date: <input type="text" id="datepicker"></p>
             <!-- datepicker end -->
             <p>Modal body text goes here.</p>
           </div>
